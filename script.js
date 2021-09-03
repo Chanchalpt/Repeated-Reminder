@@ -1,29 +1,22 @@
+let play;
+function reminder() {
+    let num = document.querySelector("#time").value;
+    num = num * 60;
+    let div = document.getElementById("timerdiv");
+    let i = num;
     play = setInterval(() => {
-        let audio = new Audio('sound.wav');
-        audio.play();
-
-        let temp = time;
-        while (temp > 0) {
-            console.log("temp: " + temp);
-            let div = document.getElementById("timerdiv");
-            setTimeout(() => {
-                div.innerHTML = temp;
-            }, (1000));
-            temp--;
+        div.innerHTML = i;
+        if (i == 0) {
+            let audio = new Audio('sound.wav');
+            audio.play();
+            i = num;
         }
-    }, (time * 1000));
-
-    // document.body.style.background = color;
-    // console.log("button pressed");
-    // var para = document.querySelector("p");
-    // para.style.color = "red";
+        else {
+            i--;
+        }
+    }, (1000));
 }
 
-
-
-                    function timer(time, element) {
-                        let div = document.getElementById(element);
-                        div.innerHTML = time;
-
-
-                    }
+function reminderStopper() {
+    clearInterval(play);
+}
