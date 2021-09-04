@@ -84,6 +84,19 @@ p {
   color: black;
 }
 
+#timerdiv {
+  font-size: 7rem;
+  padding: 4rem;
+}
+
+#timer {
+  display: none;
+  animation-name: stretch;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+}
+
 #inputArea {
   animation-name: stretch;
   animation-duration: 0.3s;
@@ -103,4 +116,54 @@ p {
   background-color: #fff;
   padding: 0;
   transition: 0.5s;
+}
+
+#close:hover {
+  margin: 1px;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  font-size: 5rem;
+  border: none;
+  color: #fff;
+  background-color: #ffc801;
+  padding: 0;
+  transition: 0.5s;
+}
+
+@media only screen and (max-width: 800px) {
+  main {
+    width: 80%;
+    margin: auto;
+    top: 50%;
+  }
+
+  #timerdiv {
+    font-size: 4rem;
+    padding: 2rem;
+  }
+
+  .heading {
+    font-size: 1.4rem;
+  }
+
+  #close {
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
+  }
+
+  #close:hover {
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
+  }
+
+  input[type="text"] {
+    width: 80%;
+  }
+
+  input[type="submit"] {
+    width: 40%;
+  }
 }
