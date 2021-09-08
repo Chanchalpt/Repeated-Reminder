@@ -17,7 +17,7 @@ function countDown(secs, elem){
     element.innerHTML = convertHMS(secs);
     if(secs < 1){
         reminder();
-        let audio = new Audio('sound.wav');
+        let audio = new Audio('Frondend/sounds/sound.wav');
         audio.play();
         audio.stop();
     }
